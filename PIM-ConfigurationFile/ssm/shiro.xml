@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:util="http://www.springframework.org/schema/util"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+     	http://www.springframework.org/schema/util
+     	http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+   
+   <!-- 自定义Realm -->
+	<bean id="myRealm" class="com.panda.shiro.MyRealm"/>  
+	
+	<!-- 自定义单用户登录控制 -->
+	<!-- <bean id="kickoutSessionControlFilter" class="com.panda.shiro.KickoutSessionControlFilter">
+	</bean> -->
+	<!-- 自定义过滤器 -->
+	<bean id="roleOrFilter" class="com.panda.shiro.CustomRolesAuthorizationFilter"> 
+ 	</bean>
+	<!-- Shiro过滤器 -->
+	<bean id="shiroFilter" class="com.panda.shiro.MyFilterChains">  
+	    <!-- Shiro的核心安全接口,这个属性是必须的 -->  
+	    <property name="securityManager" ref="securityManager"/>
+	    <!-- 身份认证失败，则跳转到登录页面的配置 -->  
+	    <property name="loginUrl" value="/index.jsp"/>
+	    <!-- 权限认证失败，则跳转到指定页面 -->  
+	    <property name="unauthorizedUrl" value="/permissionfalse.jsp"/>  
+	    <property name="filters">
+	        <util:map>
+	           <!--  <entry key="authc" value-ref="formAuthenticationFilter" />
+	            <entry key="sysUser" value-ref="sysUserFilter" /> -->
+	           <!--  <entry key="kickout" value-ref="kickoutSessionControlFilter" /> -->
+	            <entry key="roleOrFilter" value-ref="roleOrFilter"/>
+	        </util:map>
+	    </property>
+	    <!-- Shiro连接约束配置,即过滤链的定义 -->  
+	    <property name="filterChainDefinitions">  
+	        <value>  
+	            <!-- 
+	            /login=anon
+				/jsp/**=roles[管理员]
+				/regist=anon
+				 -->
+	        </value>  
+	    </property>
+	</bean>  
+	
+	<!-- 保证实现了Shiro内部lifecycle函数的bean执行 -->  
+	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>  
+	
+	<!-- 开启Shiro注解 -->
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor"/>  
+  		<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">  
+  	  <property name="securityManager" ref="securityManager"/>  
+    </bean>  
+      
+   <bean id="sessionDAO" class="org.apache.shiro.session.mgt.eis.MemorySessionDAO"></bean>  
+      
+      <!-- 配置shiro session 的一个管理器 -->  
+   <bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">    
+	    <property name="globalSessionTimeout" value="1800000"/>    
+	    <property name="deleteInvalidSessions" value="true"/>    
+	    <property name="sessionValidationSchedulerEnabled" value="true"/>    
+	    <property name="sessionValidationInterval" value="1800000"/>    
+	    <property name="sessionIdCookie" ref="sessionIdCookie"/>    
+	     <property name="sessionDAO" ref="sessionDAO"></property>  
+	</bean>    
+	    
+	<bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">    
+	    <constructor-arg name="name" value="SHRIOSESSIONID"/>    
+	</bean>     
+      
+    
+      
+    <!-- 配置shiro 缓存的一个管理器 -->  
+    <bean id="shiroCacheManager" class="org.apache.shiro.cache.MemoryConstrainedCacheManager"></bean>  
+  
+    <!-- 配置 Shiro 的 SecurityManager Bean. -->  
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">  
+        <!--  <property name="cacheManager" ref="cacheManager"/>-->  
+        <property name="realm" ref="myRealm"/>  
+       <!-- shiro缓存管理器 -->  
+        <property name="cacheManager" ref="shiroCacheManager"></property>  
+        <!-- shiro session管理器 -->  
+        <property name="sessionManager" ref="sessionManager"></property>  
+    </bean>  
+</beans>

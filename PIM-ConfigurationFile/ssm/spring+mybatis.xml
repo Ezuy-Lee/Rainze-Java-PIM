@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:mvc="http://www.springframework.org/schema/mvc"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+<!--ssm整合-->
+<!--导入约束配置包扫描 -->
+<context:component-scan base-package="com.itcast"/>
+<!--配置mybatis整合-->
+<!--创建工厂 SqlSessionFactoryBean 创建sqlSession 必须要有数据源-->
+<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+<!--注入数据源-->
+<property name="dataSource" ref="dataSource"/>
+<!--配置包别名-->
+<property name="typeAliasesPackage" value="com.itcast.domain"/>
+</bean>
+<!--创建dao子类的对象 MapperScannerConfigurer 其实就是mappers映射-->
+<bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+<property name="basePackage" value="com.itcast.dao"/>
+</bean>
+<!--引入外部的properties文件-->
+<context:property-placeholder location="classpath:db.properties"/>
+<!--配置数据源-->
+<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+<!--基本四项-->
+<property name="driverClassName" value="${jdbc.driverClassName}"/>
+<property name="url" value="${jdbc.url}"/>
+<property name="username" value="${jdbc.username}"/>
+<property name="password" value="${jdbc.password}"/>
+</bean>
+<!--增删改事务-->
+<!--1.配置事务管理器 注意 id-->
+<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+<!--注入数据源-->
+<property name="dataSource" ref="dataSource"/>
+</bean>
+
+
+<!--2.配置增强的方法 二次增强-->
+<tx:advice id="myAdvice">
+<tx:attributes>
+<tx:method name="find*" read-only="true" isolation="DEFAULT" propagation="SUPPORTS"/>
+<tx:method name="update*" read-only="false" isolation="DEFAULT" propagation="REQUIRED"/>
+<tx:method name="delete*" read-only="false" isolation="DEFAULT" propagation="REQUIRED"/>
+<tx:method name="save*" read-only="false" isolation="DEFAULT" propagation="REQUIRED"/>
+</tx:attributes>
+</tx:advice>
+<!--3.配置aop切面-->
+<aop:config>
+<aop:pointcut id="point1" expression="execution(* com.itcast.service.impl.*.*(..))"/>
+<aop:advisor advice-ref="myAdvice" pointcut-ref="point1"/>
+</aop:config>                        
+</beans>

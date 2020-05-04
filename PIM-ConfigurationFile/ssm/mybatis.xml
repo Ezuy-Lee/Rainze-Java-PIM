@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--引入外部的一个db.properties配置文件 支持el-->
+    <properties resource="db.properties"></properties>
+    <!--
+        typeAliases 类型的别名  配置一
+            <typeAlias type="类型全限定类名" alias="别名"></typeAlias>
+             <typeAliases>
+                <typeAlias type="com.itheima.domain.User" alias="user"></typeAlias>
+                <typeAlias type="com.itheima.domain.QueryVo" alias="queryVo"></typeAlias>
+            </typeAliases>
+        别名配置二   配置到包下
+            <package name="com.itheima.domain"></package>
+    -->
+    <typeAliases>
+        <!--配置到包下即可  包下的所有的类自动起别名  别名就是类名 不区分大小写 -->
+        <package name="com.itheima.domain"></package>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--
+        1.配置 直接配置Mapper的映射文件 路径
+            <mapper resource="UserDao.xml"/>
+        2.配置到接口下  由接口的类去找映射文件 有原则
+            2.1  接口类的名称和配置文件的名称必须一样
+            2.2  接口的包名 和 配置文件存放路径的文件夹名称必须一致
+            <mapper class="com.itheima.dao.UserDao"/>
+        3. package 配置到Dao接口的包下
+             <package name="com.itheima.dao"></package>
+    -->
+    <mappers>
+        <!--建立关系-->
+        <package name="com.itheima.dao"></package>
+
+    </mappers>
+</configuration>

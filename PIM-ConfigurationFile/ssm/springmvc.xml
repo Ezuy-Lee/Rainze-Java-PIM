@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:mvc="http://www.springframework.org/schema/mvc"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--用到注解 需要配置包扫描-->
+<context:component-scan base-package="com.liyuze"></context:component-scan>
+<!--配置映射器 和适配器 以下配置为二者的结合体-->
+<!--conversion-service 注解驱动 除了有适配器 映射器 转换器 将新的转换器 使用-->
+<mvc:annotation-driven conversion-service="conversionServiceFactoryBean"></mvc:annotation-driven>
+<!--配置视图解析器-->
+<bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<!--配置查找路劲的前缀和后缀-->
+<property name="prefix" value="/jsps/"></property> <!--前缀-->
+<property name="suffix" value=".jsp"></property> <!--后缀-->
+</bean>
+
+<!--配置自定义转化器-->
+<!--spring 提供类型转换器 功能不是叠加 需要自己再次配置 -->
+<bean id="conversionServiceFactoryBean" class="org.springframework.context.support.ConversionServiceFactoryBean">
+<!--将自己定义的转换器交给spring-->
+<property name="converters">
+<list>
+<!--配置类型转换器 省略了引入过程 引入自己定义的转化器-->
+<bean class="com.liyuze.action.converter.MyConverter"></bean>
+</list>
+</property>
+</bean>
+<!--释放静态资源-->
+    <mvc:default-servlet-handler/>
+</beans>

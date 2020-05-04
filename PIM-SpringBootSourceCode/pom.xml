@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.liyuze</groupId>
+    <artifactId>PIM-SpringBootSourceCode</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>spring-boot-message-converter</module>
+        <module>spring-boot-quartz</module>
+        <module>spring-boot-admin</module>
+        <module>spring-boot-druid</module>
+        <module>spring-boot-error-page</module>
+        <module>spring-boot-logging</module>
+        <module>spring-boot-redis</module>
+        <module>spring-boot-schedule</module>
+        <module>spring-boot-swagger</module>
+        <module>spring-boot-test</module>
+        <module>spring-boot-transaction</module>
+        <module>spring-boot-web-freemarker</module>
+        <module>spring-boot-web-jsp</module>
+        <module>spring-boot-web-thymeleaf</module>
+        <module>spring-boot-web-thymeleaf-syntax</module>
+        <module>spring-boot-admin</module>
+        <module>spring-boot-ajax</module>
+        <module>spring-boot-file-upload</module>
+        <module>spring-boot-hello-world</module>
+        <module>spring-boot-mybatis</module>
+        <module>spring-boot-RESTful-api</module>
+        <module>spring-boot-static-resources</module>
+        <module>spring-boot-jdbc</module>
+        <module>springboot-project-news-publish-system</module>
+        <module>spring-boot-project-front-end-back-end</module>
+
+    </modules>
+</project>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd">
+<!--三个导入约束的说明:
+第一个context 可以扫描包配置的约束
+第二个aop 面向切面的aop约束
+第三个tx 对事务的支持约束
+注解的配置原则: 一般是我们自己写的类可以用注解 别人写的类(第三方或者底层的)我们用xml配置
+-->
+<!--配置Spring事务注解搭配-->
+<!--扫描包-->
+<context:component-scan base-package="com.liyuze"></context:component-scan>
+<!--支持注解的事务驱动 已经涵盖了aop支持 如果事务管理平台的id 叫transactionManager 可以省略配置-->
+<tx:annotation-driven></tx:annotation-driven>
+
+<!--
+配置增强类 主要的目的是帮我们控制事务 而控制事务需要连接
+配置事务管理品台 有不同的版本spring mybatis jdbcTemplate 选择DataSourceTransactionManager-->
+<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+<!--开启事务管理品台需要连接 所有需要注入数据源-->
+<property name="dataSource" ref="dataSource"></property>
+</bean>
+
+<!--配置数据源-->
+<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+<property name="url" value="jdbc:mysql:///mybatis"></property>
+<property name="username" value="root"></property>
+<property name="password" value="123456"></property>
+</bean>
+
+<!--配置jdbc模板 查询数据库-->
+<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+<!--注入数据源-->
+<property name="dataSource" ref="dataSource"></property>
+</bean>
+
+</beans>

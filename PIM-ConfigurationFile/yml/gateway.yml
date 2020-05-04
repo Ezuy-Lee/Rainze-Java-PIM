@@ -1,0 +1,40 @@
+server:
+  port: 8763
+
+
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: ${dtns.micro.servlet.multipart.max-file-size}
+      max-request-size: ${dtns.micro.servlet.multipart.max-request-size}
+
+eureka:
+  instance:
+    hostname: www.dt-cloud.com
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+zuul:
+  routes:
+    api-nongji:
+      path: /api-xxx/**   #项目访问开头
+      serviceId: xxx   # 项目名称
+  add-proxy-headers: true
+
+
+##设置超时时间 9 秒
+ribbon:
+  ReadTimeout: 900000
+  SocketTimeout: 100000
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 900000
+
+

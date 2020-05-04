@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/PIM-JavaBaseUtil/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-JavaBaseUtil/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-JavaConcurrentProgramming/src/main/java/com/liyuze/pim/cp/chapter4/DeadLock.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-MavenSSM/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-MavenSSM/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-MavenSSMAdminLTE/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-MavenSSMAdminLTE/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-MavenSSMEasyUI/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-MavenSSMEasyUI/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBoot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-RESTful-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-admin/spring-boot-admin-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-admin/spring-boot-admin-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-ajax/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-druid/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-error-page/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-file-upload/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-hello-world/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-jdbc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-logging/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-message-converter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-project-front-end-back-end/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-quartz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-schedule/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-static-resources/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-swagger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-transaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-web-freemarker/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-web-jsp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-web-thymeleaf-syntax/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-web-thymeleaf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/springboot-project-news-publish-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-ThirdAPI/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PIM-ThirdAPI/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

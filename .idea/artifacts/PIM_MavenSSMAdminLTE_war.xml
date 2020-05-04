@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="PIM-MavenSSMAdminLTE:war">
+    <output-path>$PROJECT_DIR$/PIM-MavenSSMAdminLTE/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>PIM-MavenSSMAdminLTE</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ssm-cluster.war">
+      <element id="artifact" artifact-name="PIM-MavenSSMAdminLTE:war exploded" />
+    </root>
+  </artifact>
+</component>

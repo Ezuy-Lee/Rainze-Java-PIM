@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PIM-ConfigurationFile/PIM-ConfigurationFile.iml" filepath="$PROJECT_DIR$/PIM-ConfigurationFile/PIM-ConfigurationFile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-JavaBaseUtil/PIM-JavaBaseUtil.iml" filepath="$PROJECT_DIR$/PIM-JavaBaseUtil/PIM-JavaBaseUtil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-JavaConcurrentProgramming/PIM-JavaConcurrentProgramming.iml" filepath="$PROJECT_DIR$/PIM-JavaConcurrentProgramming/PIM-JavaConcurrentProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-JavaWeb/PIM-JavaWeb.iml" filepath="$PROJECT_DIR$/PIM-JavaWeb/PIM-JavaWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-MavenSSM/PIM-MavenSSM.iml" filepath="$PROJECT_DIR$/PIM-MavenSSM/PIM-MavenSSM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-MavenSSMAdminLTE/PIM-MavenSSMAdminLTE.iml" filepath="$PROJECT_DIR$/PIM-MavenSSMAdminLTE/PIM-MavenSSMAdminLTE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-MavenSSMEasyUI/PIM-MavenSSMEasyUI.iml" filepath="$PROJECT_DIR$/PIM-MavenSSMEasyUI/PIM-MavenSSMEasyUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBoot/PIM-SpringBoot.iml" filepath="$PROJECT_DIR$/PIM-SpringBoot/PIM-SpringBoot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/PIM-SpringBootSourceCode.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/PIM-SpringBootSourceCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-ThirdAPI/PIM-ThirdAPI.iml" filepath="$PROJECT_DIR$/PIM-ThirdAPI/PIM-ThirdAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-RESTful-api/spring-boot-RESTful-api.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-RESTful-api/spring-boot-RESTful-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-admin/spring-boot-admin.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-admin/spring-boot-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-admin/spring-boot-admin-client/spring-boot-admin-client.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-admin/spring-boot-admin-client/spring-boot-admin-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-admin/spring-boot-admin-server/spring-boot-admin-server.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-admin/spring-boot-admin-server/spring-boot-admin-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-ajax/spring-boot-ajax.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-ajax/spring-boot-ajax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-druid/spring-boot-druid.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-druid/spring-boot-druid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-error-page/spring-boot-error-page.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-error-page/spring-boot-error-page.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-file-upload/spring-boot-file-upload.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-file-upload/spring-boot-file-upload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-hello-world/spring-boot-hello-world.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-hello-world/spring-boot-hello-world.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-jdbc/spring-boot-jdbc.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-jdbc/spring-boot-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-logging/spring-boot-logging.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-logging/spring-boot-logging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-message-converter/spring-boot-message-converter.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-message-converter/spring-boot-message-converter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-mybatis/spring-boot-mybatis.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-mybatis/spring-boot-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-project-front-end-back-end/spring-boot-project-front-end-back-end.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-project-front-end-back-end/spring-boot-project-front-end-back-end.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-quartz/spring-boot-quartz.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-quartz/spring-boot-quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-redis/spring-boot-redis.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-redis/spring-boot-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-schedule/spring-boot-schedule.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-schedule/spring-boot-schedule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-static-resources/spring-boot-static-resources.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-static-resources/spring-boot-static-resources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-swagger/spring-boot-swagger.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-swagger/spring-boot-swagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-test/spring-boot-test.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-test/spring-boot-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-transaction/spring-boot-transaction.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-transaction/spring-boot-transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-web-freemarker/spring-boot-web-freemarker.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-web-freemarker/spring-boot-web-freemarker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-web-jsp/spring-boot-web-jsp.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-web-jsp/spring-boot-web-jsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-web-thymeleaf/spring-boot-web-thymeleaf.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-web-thymeleaf/spring-boot-web-thymeleaf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-web-thymeleaf-syntax/spring-boot-web-thymeleaf-syntax.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/spring-boot-web-thymeleaf-syntax/spring-boot-web-thymeleaf-syntax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PIM-SpringBootSourceCode/springboot-project-news-publish-system/springboot-project-news-publish-system.iml" filepath="$PROJECT_DIR$/PIM-SpringBootSourceCode/springboot-project-news-publish-system/springboot-project-news-publish-system.iml" />
+    </modules>
+  </component>
+</project>

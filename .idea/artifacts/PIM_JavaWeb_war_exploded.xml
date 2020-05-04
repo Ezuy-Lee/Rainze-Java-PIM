@@ -1,0 +1,69 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="PIM-JavaWeb:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/PIM_JavaWeb_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="PIM-JavaWeb" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/jdom.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/json.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/mysql.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/asm-3.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/standard.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/junit-4.6.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/c3p0-0.9.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/core-2.3.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/ognl-3.0.6.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/asm-tree-3.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/log4j-1.2.16.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/quartz-2.2.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/ezmorph-1.0.6.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/mybatis-3.2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/commons-io-2.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/httpcore-4.2.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/httpmime-4.2.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/asm-commons-3.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/slf4j-api-1.6.6.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/commons-dbcp-1.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/commons-lang-2.4.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/httpclient-4.2.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/commons-codec-1.9.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/jackson-all-1.6.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/javassist-3.11.0.GA.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/slf4j-log4j12-1.6.6.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/json-lib-2.2.3-jdk15.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/mybatis-spring-1.2.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/commons-logging-1.1.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/mybatis-ehcache-1.0.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/httpclient-cache-4.2.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/jackson-core-asl-1.6.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/commons-beanutils-1.8.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/commons-collections-3.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/spring-tx-4.0.6.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/commons-fileupload-1.3.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/jackson-mapper-asl-1.6.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/spring-aop-4.0.6.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/spring-orm-4.0.6.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/spring-web-4.0.6.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/spring-core-4.0.6.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/spring-jdbc-4.0.6.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/spring-test-4.0.6.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/spring-beans-4.0.6.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/spring-webmvc-4.0.6.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/spring-aspects-4.0.6.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/spring-context-4.0.6.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/spring-expression-4.0.6.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/com.springsource.net.sf.cglib-2.2.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/spring-context-support-4.0.6.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/com.springsource.org.aopalliance-1.0.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/PIM-JavaWeb/web/WEB-INF/lib/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar" />
+          <element id="library" level="project" name="lib" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="PIM-JavaWeb/web/Web" />
+    </root>
+  </artifact>
+</component>

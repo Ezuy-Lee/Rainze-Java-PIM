@@ -1,0 +1,52 @@
+server:
+  port: 10000
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 500MB
+      max-request-size: 500MB
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.118:3306/dt-material-trace?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: admin
+    password: nZ_123456
+  #    url: jdbc:mysql://192.168.5.223:3306/apa?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+  #    username: admin
+  #    password: 2wW$XdbjfDAZh1XrqjqlDr6@PkRlsV3T
+  thymeleaf:
+    mode: LEGACYHTML5
+    prefix: classpath:/templates/
+    suffix: .html
+    template-resolver-order: 0
+    cache: false
+    servlet:
+      content-type: text/html
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+#  freemarker:
+#    template-loader-path: classpath:/templates
+#    charset: utf-8
+#  mvc:
+#    static-path-pattern: /static/**
+#     重点 使用时  在html标签中 xmlns:th="http://www.w3.org/1999/xhtml" 解决th报错
+#    url: jdbc:mysql://192.168.0.118:3306/apa?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+#    username: admin
+#    password: nZ_123456
+
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+
+logging:
+  config: classpath:logging-config.xml
+
+
+
+
+
+
+
+

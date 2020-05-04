@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+			    http://www.springframework.org/schema/beans/spring-beans.xsd
+			    http://www.springframework.org/schema/context
+			    http://www.springframework.org/schema/context/spring-context.xsd
+			    http://www.springframework.org/schema/aop
+			    http://www.springframework.org/schema/aop/spring-aop.xsd
+			    http://www.springframework.org/schema/tx
+			    http://www.springframework.org/schema/tx/spring-tx.xsd
+			    http://www.springframework.org/schema/mvc
+			    http://www.springframework.org/schema/mvc/spring-mvc.xsd
+			    http://www.springframework.org/schema/security
+			    http://www.springframework.org/schema/security/spring-security.xsd">
+    <!--释放静态资源-->
+    <security:http security="none" pattern="/login.jsp"/>
+    <security:http security="none" pattern="/failer.jsp"/>
+    <security:http security="none" pattern="/css/**"/>
+    <security:http security="none" pattern="/img/**"/>
+    <security:http security="none" pattern="/plugins/**"/>
+
+    <!--配置基本角色的拦截-->
+    <security:http auto-config="true" use-expressions="true">
+        <security:intercept-url pattern="/**" access="hasAnyRole('ROLE_USER','ROLE_ADMIN')"/>
+        <!--指定自己的登录页面-->
+        <security:form-login login-page="/login.jsp"
+                             login-processing-url="/login"
+                             default-target-url="/index.jsp"
+                             authentication-failure-url="/failer.jsp"/>
+        <!--退出登录配置-->
+        <security:logout invalidate-session="true"
+                         logout-url="/logout"
+                         logout-success-url="/login.jsp"/>
+        <!--关闭csrf拦截-->
+        <security:csrf disabled="true"/>
+    </security:http>
+    <!--提供一个加密器-->
+    <!--注意此处的顺序 不能互换 如果顺序不正确会导致报错-->
+    <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
+    <bean id="sysUserServiceImpl" class="com.itheima.impl.SysUserServiceImpl"/>
+    <security:authentication-manager>
+        <security:authentication-provider user-service-ref="sysUserServiceImpl">
+            <!--<security:user-service>
+                <security:user name="user" password="{noop}user"
+                               authorities="ROLE_USER" />
+                <security:user name="admin" password="{noop}admin"
+                               authorities="ROLE_ADMIN" />
+            </security:user-service>-->
+        </security:authentication-provider>
+    </security:authentication-manager>
+</beans>

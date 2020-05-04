@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="PIM-MavenSSMEasyUI:war">
+    <output-path>$PROJECT_DIR$/PIM-MavenSSMEasyUI/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>PIM-MavenSSMEasyUI</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="perfect-ssm.war">
+      <element id="artifact" artifact-name="PIM-MavenSSMEasyUI:war exploded" />
+    </root>
+  </artifact>
+</component>

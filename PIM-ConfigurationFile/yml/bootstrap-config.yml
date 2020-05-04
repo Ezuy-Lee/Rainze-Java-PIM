@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: dtns-config
+  security:
+    user:
+      name: admin
+      password: admin
+  profiles:
+    include: subversion
+  cloud:
+    config:
+      enabled: true
+      server:
+        svn:
+          uri: http://193.168.0.323/...
+          username: xxx
+          password: xxx
+          search-paths: dev/**
+          default-label: config
+          basedir: config-repo  #使用版本控制方式将配置文件clone到本地，往往都是克隆到一些临时目录中，但是操作系统往往会清理这些临时目录，这可以导致一些我们不期待的情况，比如丢配置，为了避免出现这种问题，可以通过spring.cloud.config.server.svn.basedir去更改本地仓库的位置。
+      profile: dev
+    bus:
+      trace:
+        enabled: true
+
+    stream:
+      kafka:
+        binder:
+          brokers: 192.168.0.33:9092
+          zk-nodes: 192.168.0.33:2181
+
+server:
+  port: 8762
+
+
+eureka:
+  instance: #配置eureka 服务名字显示
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:8761/eureka/
+
+
+
+#  rabbitmq:
+#     host: 192.168.0.222
+#     port: 5672
+#     username: xxx
+#     password: xxx
+
+
+logging:
+  levels:
+    org.springframework.boot.env.PropertySourcesLoader: TRACE
+    org.springframework.cloud.config.server: DEBUG
+
+#management:
+#  security:
+#    enabled: false
