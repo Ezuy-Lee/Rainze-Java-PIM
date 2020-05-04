@@ -25,4 +25,9 @@ PIM (ProjectIntegrationManagement) 是英文(ProjectIntegrationManagement)的缩
 ## 未来要集成的
 - 微服务项目    
 - 工具类项目    
-- 测试Demo项目    
+- 测试Demo项目
+
+## 关于我
+
+- 个人博客：www.liyuze.work    
+- QQ群：666768414
