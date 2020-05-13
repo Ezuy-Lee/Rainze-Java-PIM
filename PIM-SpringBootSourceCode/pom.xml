@@ -12,10 +12,10 @@
     <modules>
         <module>spring-boot-message-converter</module>
         <module>spring-boot-quartz</module>
-         <module>spring-boot-quartz</module>
         <module>spring-boot-admin</module>
         <module>spring-boot-druid</module>
         <module>spring-boot-error-page</module>
+        <module>spring-boot-email-send</module>
         <module>spring-boot-logging</module>
         <module>spring-boot-redis</module>
         <module>spring-boot-schedule</module>
