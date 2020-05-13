@@ -1,7 +1,7 @@
 $(function () {
     //修改个人信息
     $('#updateUserNameButton').click(function () {
-        $("#updateUserNameButton").attr("disabled",true);
+        $("#updateUserNameButton").attr("disabled", true);
         var userName = $('#loginUserName').val();
         var nickName = $('#nickName').val();
         if (validUserNameForUpdate(userName, nickName)) {
@@ -24,7 +24,7 @@ $(function () {
     });
     //修改密码
     $('#updatePasswordButton').click(function () {
-        $("#updatePasswordButton").attr("disabled",true);
+        $("#updatePasswordButton").attr("disabled", true);
         var originalPassword = $('#originalPassword').val();
         var newPassword = $('#newPassword').val();
         if (validPasswordForUpdate(originalPassword, newPassword)) {

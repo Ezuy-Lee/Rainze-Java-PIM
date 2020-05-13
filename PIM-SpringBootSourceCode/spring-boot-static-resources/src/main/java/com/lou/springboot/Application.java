@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * 静态资源处理
- *
  */
 @SpringBootApplication
 public class Application {

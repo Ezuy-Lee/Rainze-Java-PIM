@@ -28,7 +28,7 @@ $('#commentSubmit').click(function () {
         return;
     }
     var data = {
-        "newsId": newsId, "verifyCode": verifyCode, "commentator": commentator,"commentBody": commentBody
+        "newsId": newsId, "verifyCode": verifyCode, "commentator": commentator, "commentBody": commentBody
     };
     console.log(data);
     $.ajax({
@@ -42,8 +42,7 @@ $('#commentSubmit').click(function () {
                 });
                 $('#commentBody').val('');
                 $('#verifyCode').val('');
-            }
-            else {
+            } else {
                 swal(result.message, {
                     icon: "error",
                 });

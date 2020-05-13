@@ -35,7 +35,7 @@ public class NewsServiceImpl implements NewsService {
 
     @Override
     public Boolean deleteBatch(Integer[] ids) {
-        return newsMapper.deleteBatch(ids)>0;
+        return newsMapper.deleteBatch(ids) > 0;
     }
 
     @Override

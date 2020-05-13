@@ -96,7 +96,7 @@ $('#saveButton').click(function () {
     var url = '/admin/news/save';
     var swlMessage = '保存成功';
     var data = {
-        "newsTitle": newsTitle,  "newsCategoryId": newsCategoryId,
+        "newsTitle": newsTitle, "newsCategoryId": newsCategoryId,
         "newsContent": newsContent, "newsCoverImage": newsCoverImage, "newsStatus": newsStatus
     };
     if (newsId > 0) {
@@ -130,8 +130,7 @@ $('#saveButton').click(function () {
                 }).then(function () {
                     window.location.href = "/admin/news";
                 })
-            }
-            else {
+            } else {
                 $('#articleModal').modal('hide');
                 swal(result.message, {
                     icon: "error",

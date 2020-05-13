@@ -6,7 +6,7 @@
 </head>
 <body>
 <h3>#strings 工具类测试 </h3>
-<div th:if="${not #strings.isEmpty(testString)}" >
+<div th:if="${not #strings.isEmpty(testString)}">
     <p>testString初始值 : <span th:text="${testString}"/></p>
     <p>toUpperCase : <span th:text="${#strings.toUpperCase(testString)}"/></p>
     <p>toLowerCase : <span th:text="${#strings.toLowerCase(testString)}"/></p>

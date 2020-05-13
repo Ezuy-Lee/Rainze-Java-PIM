@@ -47,8 +47,8 @@ public class ThymeleafController {
         map.put("title", "Thymeleaf 语法测试");
         map.put("testString", "玩转 Spring Boot");
         map.put("bool", true);
-        map.put("testArray", new Integer[]{2018,2019,2020,2021});
-        map.put("testList", Arrays.asList("Spring","Spring Boot","Thymeleaf","MyBatis","Java"));
+        map.put("testArray", new Integer[]{2018, 2019, 2020, 2021});
+        map.put("testList", Arrays.asList("Spring", "Spring Boot", "Thymeleaf", "MyBatis", "Java"));
         Map testMap = new HashMap();
         testMap.put("platform", "shiyanlou");
         testMap.put("title", "玩转 Spring Boot");

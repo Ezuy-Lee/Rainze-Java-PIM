@@ -11,6 +11,7 @@ public class QuartzTaskConfig {
         return JobBuilder.newJob(QuartzTask.class).withIdentity("quartzTaskJob").storeDurably()
                 .build();
     }
+
     @Bean
     public Trigger simpleJobTrigger() {
         //定义每 5 秒执行一次

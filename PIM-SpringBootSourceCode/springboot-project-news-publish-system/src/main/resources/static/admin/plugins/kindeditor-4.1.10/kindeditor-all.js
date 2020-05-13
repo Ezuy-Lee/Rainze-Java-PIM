@@ -8496,7 +8496,7 @@ KindEditor.plugin('multiimage', function (K) {
 // Private: takes a URL, determines if it is relative and converts to an absolute URL
 // using the current site. Only processes the URL if it can, otherwise returns the URL untouched
     SWFUpload.completeURL = function (url) {
-        if (typeof(url) !== "string" || url.match(/^https?:\/\//i) || url.match(/^\//)) {
+        if (typeof (url) !== "string" || url.match(/^https?:\/\//i) || url.match(/^\//)) {
             return url;
         }
 
@@ -8702,7 +8702,7 @@ KindEditor.plugin('multiimage', function (K) {
         var postParams = this.settings.post_params;
         var paramStringPairs = [];
 
-        if (typeof(postParams) === "object") {
+        if (typeof (postParams) === "object") {
             for (var name in postParams) {
                 if (postParams.hasOwnProperty(name)) {
                     paramStringPairs.push(encodeURIComponent(name.toString()) + "=" + encodeURIComponent(postParams[name].toString()));
@@ -8727,11 +8727,11 @@ KindEditor.plugin('multiimage', function (K) {
             var movieElement = null;
             movieElement = this.getMovieElement();
 
-            if (movieElement && typeof(movieElement.CallFunction) === "unknown") { // We only want to do this in IE
+            if (movieElement && typeof (movieElement.CallFunction) === "unknown") { // We only want to do this in IE
                 // Loop through all the movie's properties and remove all function references (DOM/JS IE 6/7 memory leak workaround)
                 for (var i in movieElement) {
                     try {
-                        if (typeof(movieElement[i]) === "function") {
+                        if (typeof (movieElement[i]) === "function") {
                             movieElement[i] = null;
                         }
                     } catch (ex1) {
@@ -8939,7 +8939,7 @@ KindEditor.plugin('multiimage', function (K) {
 // Public: getFile retrieves a File object by ID or Index.  If the file is
 // not found then 'null' is returned.
     SWFUpload.prototype.getFile = function (fileID) {
-        if (typeof(fileID) === "number") {
+        if (typeof (fileID) === "number") {
             return this.callFlash("GetFileByIndex", [fileID]);
         } else {
             return this.callFlash("GetFile", [fileID]);
@@ -9150,7 +9150,7 @@ KindEditor.plugin('multiimage', function (K) {
         // Warning: Don't call this.debug inside here or you'll create an infinite loop
 
         var f = this.eventQueue ? this.eventQueue.shift() : null;
-        if (typeof(f) === "function") {
+        if (typeof (f) === "function") {
             f.apply(this);
         }
     };
@@ -9211,11 +9211,11 @@ KindEditor.plugin('multiimage', function (K) {
     SWFUpload.prototype.cleanUp = function (movieElement) {
         // Pro-actively unhook all the Flash functions
         try {
-            if (this.movieElement && typeof(movieElement.CallFunction) === "unknown") { // We only want to do this in IE
+            if (this.movieElement && typeof (movieElement.CallFunction) === "unknown") { // We only want to do this in IE
                 this.debug("Removing Flash functions hooks (this should only run in IE and should prevent memory leaks)");
                 for (var key in movieElement) {
                     try {
-                        if (typeof(movieElement[key]) === "function") {
+                        if (typeof (movieElement[key]) === "function") {
                             movieElement[key] = null;
                         }
                     } catch (ex) {
@@ -9403,12 +9403,12 @@ KindEditor.plugin('multiimage', function (K) {
 
 	*/
 
-    if (typeof(SWFUpload) === "function") {
+    if (typeof (SWFUpload) === "function") {
         SWFUpload.queue = {};
 
         SWFUpload.prototype.initSettings = (function (oldInitSettings) {
             return function () {
-                if (typeof(oldInitSettings) === "function") {
+                if (typeof (oldInitSettings) === "function") {
                     oldInitSettings.call(this);
                 }
 
@@ -9444,7 +9444,7 @@ KindEditor.plugin('multiimage', function (K) {
 
         SWFUpload.queue.uploadStartHandler = function (file) {
             var returnValue;
-            if (typeof(this.queueSettings.user_upload_start_handler) === "function") {
+            if (typeof (this.queueSettings.user_upload_start_handler) === "function") {
                 returnValue = this.queueSettings.user_upload_start_handler.call(this, file);
             }
 
@@ -9464,7 +9464,7 @@ KindEditor.plugin('multiimage', function (K) {
                 this.queueSettings.queue_upload_count++;
             }
 
-            if (typeof(user_upload_complete_handler) === "function") {
+            if (typeof (user_upload_complete_handler) === "function") {
                 continueUpload = (user_upload_complete_handler.call(this, file) === false) ? false : true;
             } else if (file.filestatus === SWFUpload.FILE_STATUS.QUEUED) {
                 // If the file was stopped and re-queued don't restart the upload
