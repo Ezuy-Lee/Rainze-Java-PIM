@@ -99,8 +99,7 @@ $('#saveButton').click(function () {
                     $('#modalAdd').modal('hide');
                     //reload
                     reload();
-                }
-                else {
+                } else {
                     swal(result.message, {
                         icon: "error",
                     });
@@ -146,8 +145,7 @@ $('#editButton').click(function () {
                     $('#modalEdit').modal('hide');
                     //reload
                     reload();
-                }
-                else {
+                } else {
                     swal(result.message, {
                         icon: "error",
                     });
@@ -180,7 +178,7 @@ function userDel() {
         buttons: true,
         dangerMode: true,
     }).then((flag) => {
-            if(flag) {
+            if (flag) {
                 $.ajax({
                     type: "DELETE",
                     url: "users/delete",

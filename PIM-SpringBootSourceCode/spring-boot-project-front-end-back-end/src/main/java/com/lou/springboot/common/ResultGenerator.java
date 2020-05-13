@@ -3,8 +3,8 @@ package com.lou.springboot.common;
 import org.springframework.util.StringUtils;
 
 /**
- * @note 响应结果生成工具
  * @author 13
+ * @note 响应结果生成工具
  * @qq交流群 796794009
  * @email 2449207463@qq.com
  * @link http://13blog.site

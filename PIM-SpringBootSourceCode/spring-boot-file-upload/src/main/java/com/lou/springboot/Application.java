@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * 文件上传
- *
  */
 @SpringBootApplication
 public class Application {

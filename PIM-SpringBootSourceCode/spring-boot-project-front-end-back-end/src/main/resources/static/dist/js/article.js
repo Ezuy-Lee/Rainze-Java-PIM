@@ -106,8 +106,7 @@ $('#saveButton').click(function () {
                         icon: "success",
                     });
                     reload();
-                }
-                else {
+                } else {
                     $('#articleModal').modal('hide');
                     swal("保存失败", {
                         icon: "error",

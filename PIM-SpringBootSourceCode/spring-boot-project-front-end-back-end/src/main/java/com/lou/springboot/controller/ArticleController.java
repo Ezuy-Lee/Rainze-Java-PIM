@@ -54,7 +54,7 @@ public class ArticleController {
      */
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public Result save(@RequestBody Article article, @TokenToUser AdminUser loginUser) {
-        if (article.getAddName()==null){
+        if (article.getAddName() == null) {
             return ResultGenerator.genErrorResult(Constants.RESULT_CODE_PARAM_ERROR, "作者不能为空！");
         }
         if (loginUser == null) {

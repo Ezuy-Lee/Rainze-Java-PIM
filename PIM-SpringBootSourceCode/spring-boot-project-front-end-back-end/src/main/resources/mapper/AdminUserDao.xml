@@ -38,36 +38,36 @@
     </select>
 
     <select id="getAdminUserByUserNameAndPassword" resultMap="AdminUserResult">
-		select id,user_name,user_token
-		from tb_admin_user
+        select id,user_name,user_token
+        from tb_admin_user
         where user_name = #{userName} and password_md5 = #{passwordMD5}
         and is_deleted = 0
-		ORDER BY  id DESC limit 1
-	</select>
+        ORDER BY id DESC limit 1
+    </select>
 
     <select id="getAdminUserByToken" resultMap="AdminUserResult">
-		select id,user_name,user_token
-		from tb_admin_user
+        select id,user_name,user_token
+        from tb_admin_user
         where user_token = #{userToken}
         and is_deleted = 0
-		ORDER BY  id DESC limit 1
-	</select>
+        ORDER BY id DESC limit 1
+    </select>
 
     <select id="getAdminUserById" resultMap="AdminUserResult">
-		select user_name,user_token
-		from tb_admin_user
+        select user_name,user_token
+        from tb_admin_user
         where id=#{id}
         and is_deleted = 0
-		ORDER BY  id DESC limit 1
-	</select>
+        ORDER BY id DESC limit 1
+    </select>
 
     <select id="getAdminUserByUserName" resultMap="AdminUserResult">
-		select id,user_name,user_token
-		from tb_admin_user
+        select id,user_name,user_token
+        from tb_admin_user
         where user_name = #{userName}
         and is_deleted = 0
-		ORDER BY  id DESC limit 1
-	</select>
+        ORDER BY id DESC limit 1
+    </select>
 
     <update id="updateUserToken">
         update tb_admin_user set user_token = #{newToken} where id =#{userId} and is_deleted = 0

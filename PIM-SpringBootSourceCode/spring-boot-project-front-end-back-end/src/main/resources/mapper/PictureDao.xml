@@ -37,7 +37,7 @@
 
     <update id="delPicture" parameterType="int">
         update tb_ssm_picture
-        set is_deleted=1  where id=#{id}
+        set is_deleted=1 where id=#{id}
     </update>
 
     <select id="findPictureById" parameterType="int" resultMap="PictureResult">

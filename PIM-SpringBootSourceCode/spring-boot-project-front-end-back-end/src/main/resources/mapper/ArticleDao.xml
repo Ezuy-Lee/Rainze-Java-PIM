@@ -42,31 +42,32 @@
         </if>
     </select>
 
-    <insert id="insertArticle" useGeneratedKeys="true" keyProperty="id" parameterType="com.lou.springboot.entity.Article">
-		insert into
-		tb_ssm_article(article_title,article_content,add_name)
-		values(#{articleTitle},#{articleContent},#{addName})
-	</insert>
+    <insert id="insertArticle" useGeneratedKeys="true" keyProperty="id"
+            parameterType="com.lou.springboot.entity.Article">
+        insert into
+        tb_ssm_article(article_title,article_content,add_name)
+        values(#{articleTitle},#{articleContent},#{addName})
+    </insert>
 
     <update id="updArticle" parameterType="com.lou.springboot.entity.Article">
-		update tb_ssm_article
-		set
-		article_title=#{articleTitle},article_content=#{articleContent},
-		add_name=#{addName},update_time=#{updateTime}
-		where id=#{id}
-	</update>
+        update tb_ssm_article
+        set
+        article_title=#{articleTitle},article_content=#{articleContent},
+        add_name=#{addName},update_time=#{updateTime}
+        where id=#{id}
+    </update>
 
 
     <update id="delArticle" parameterType="int">
-		update tb_ssm_article
-		set is_deleted=1
-		where id=#{id}
-	</update>
+        update tb_ssm_article
+        set is_deleted=1
+        where id=#{id}
+    </update>
 
     <select id="getArticleById" parameterType="int" resultMap="ArticleResult">
-		select id,article_title,article_content,add_name,create_time,update_time
-		from tb_ssm_article where id=#{id} and is_deleted=0
-	</select>
+        select id,article_title,article_content,add_name,create_time,update_time
+        from tb_ssm_article where id=#{id} and is_deleted=0
+    </select>
 
     <update id="deleteBatch">
         update tb_ssm_article

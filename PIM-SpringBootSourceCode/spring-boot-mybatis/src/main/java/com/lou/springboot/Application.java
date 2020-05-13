@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Hello shiyanlou!
- *
  */
 @SpringBootApplication
 @MapperScan("com.lou.springboot.dao")
