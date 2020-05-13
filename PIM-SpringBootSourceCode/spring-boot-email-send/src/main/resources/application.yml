@@ -1,0 +1,21 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 7005
+  connection-timeout: 5000ms
+  servlet:
+    context-path: /email
+
+spring:
+  application:
+    name: email-send
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
