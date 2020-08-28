@@ -13,7 +13,7 @@
   	<properties>
     	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     	<javax.servlet.version>3.0.1</javax.servlet.version>
-    	<spring.version>4.1.4.RELEASE</spring.version>
+    	<spring.version>5.2.7.RELEASE</spring.version>
     	<org.springframework.security.version>3.1.4.RELEASE</org.springframework.security.version>
 		<mybatis.version>3.2.8</mybatis.version>
 		<httpclient.version>4.5</httpclient.version>
