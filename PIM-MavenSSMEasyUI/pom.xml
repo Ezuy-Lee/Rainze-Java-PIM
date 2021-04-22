@@ -11,7 +11,7 @@
     <properties>
         <!-- 数据库相关版本 -->
         <jdbc.driver.version>8.0.18</jdbc.driver.version>
-        <mybatis.version>3.2.5</mybatis.version>
+        <mybatis.version>3.5.6</mybatis.version>
         <mybatis-spring.version>1.2.2</mybatis-spring.version>
         <!-- spring版本 -->
         <spring.version>4.2.4.RELEASE</spring.version>
