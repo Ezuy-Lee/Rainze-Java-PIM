@@ -29,5 +29,5 @@ PIM (ProjectIntegrationManagement) 是英文(ProjectIntegrationManagement)的缩
 
 ## 关于我
 
-- 个人博客：www.liyuze.work    
+- 个人博客：https://ezuy-lee.github.io/xpai/  
 - QQ群：666768414
